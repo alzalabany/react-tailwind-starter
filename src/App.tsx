@@ -1,24 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+    <div className="bg-blue-400 h-screen grid">
+      <div className="w-3/4 my-auto ml-20">
+        <h1 className="text-5xl bg-blue-600 font-bold mb-10 text-white">{'React <3 Tailwind'}</h1>
+        <p className="text-white">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officia earum ducimus neque obcaecati consequuntur ratione accusamus at officiis tempore,
+          magnam non debitis fugit unde alias id quidem necessitatibus.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div> 
     </div>
   );
 }
