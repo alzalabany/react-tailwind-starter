@@ -1,0 +1,19 @@
+.shadow {
+  box-shadow: var(--shadow);
+}
+.shadow:active {
+  box-shadow: var(--shadow-active);
+}
+.shadow:hover {
+  box-shadow: var(--shadow-hover);
+}
+#root .page {
+  max-width: var(--page-width);
+  margin: 1px auto;
+}
+@media only screen and (max-width: 1500px) {
+  /*Tablets [601px -> 1200px]*/
+  body {
+    --page-width: 1000px;
+  }
+}
