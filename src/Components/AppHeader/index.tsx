@@ -11,13 +11,10 @@ export function AppHeader() {
       const node = window.pageYOffset;
       const forceHide = document.documentElement.clientWidth < 800;
       if (node > 14 || forceHide) {
-        console.log('hide');
         ss(true);
       } else if (node < 14) {
-        console.log('show');
         ss(false);
       }
-      // console.log(node);
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -27,9 +24,8 @@ export function AppHeader() {
   useLayoutEffect(() => {
     function updateSize() {
       ss((s) => {
-        console.log(s, document.documentElement.clientWidth < 800);
         const forceHide = document.documentElement.clientWidth < 800;
-        return forceHide ? forceHide : window.pageYOffset > 15;
+        return forceHide ? true : window.pageYOffset > 15;
       });
     }
     window.addEventListener('resize', updateSize);

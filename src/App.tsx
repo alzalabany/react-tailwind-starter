@@ -1,10 +1,10 @@
-import { AppHeader } from 'Components';
+import { AppFooter, AppHeader } from 'Components';
 
 function App() {
   return (
-    <div className="bg-blue-400 h-full">
-      <AppHeader />{' '}
-      <section className="page">
+    <div className="h-full">
+      <AppHeader />
+      <section className="page bg-blue-400 rounded p-20 ">
         <div className="w-3/4 my-auto ml-20">
           <h1 className="text-5xl bg-blue-600 font-bold mb-10 text-white">{'React <3 Tailwind'}</h1>
           <p className="text-white">
@@ -58,6 +58,15 @@ function App() {
           </p>
         </div>
       </section>
+      <AppFooter
+        links={[
+          { name: 'Kontakt', href: 'Kontakt' },
+          { name: 'Datenschutzhinweis', href: 'Kontakt' },
+          { name: 'Jugendschutz', href: 'Kontakt' },
+          { name: 'Haftungsausschluss', href: 'Kontakt' },
+          { name: 'Cookieeinstellungen', href: 'Kontakt' },
+        ]}
+      />
     </div>
   );
 }

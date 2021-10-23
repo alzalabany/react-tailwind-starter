@@ -4,3 +4,4 @@ export * from './AppFooter';
 export * from './AppHeader';
 export * from './SSOGateway';
 export * from './SplashScreen';
+export * from './Logo';

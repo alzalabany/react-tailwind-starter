@@ -553,6 +553,17 @@ video {
 [hidden] {
   display: none;
 }
+
+*, ::before, ::after {
+	--tw-translate-x: 0;
+	--tw-translate-y: 0;
+	--tw-rotate: 0;
+	--tw-skew-x: 0;
+	--tw-skew-y: 0;
+	--tw-scale-x: 1;
+	--tw-scale-y: 1;
+	--tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .my-auto {
 	margin-top: auto;
 	margin-bottom: auto;
@@ -563,14 +574,32 @@ video {
 .mb-10 {
 	margin-bottom: 2.5rem;
 }
-.grid {
-	display: grid;
+.block {
+	display: block;
 }
-.h-screen {
-	height: 100vh;
+.flex {
+	display: flex;
+}
+.h-full {
+	height: 100%;
 }
 .w-3\/4 {
 	width: 75%;
+}
+.flex-1 {
+	flex: 1 1 0%;
+}
+.transform {
+	transform: var(--tw-transform);
+}
+.resize {
+	resize: both;
+}
+.flex-wrap {
+	flex-wrap: wrap;
+}
+.rounded {
+	border-radius: 0.25rem;
 }
 .bg-blue-400 {
 	--tw-bg-opacity: 1;
@@ -580,9 +609,21 @@ video {
 	--tw-bg-opacity: 1;
 	background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
 }
+.p-20 {
+	padding: 5rem;
+}
+.pt-4 {
+	padding-top: 1rem;
+}
+.pb-4 {
+	padding-bottom: 1rem;
+}
 .text-5xl {
 	font-size: 3rem;
 	line-height: 1;
+}
+.text-\[26px\] {
+	font-size: 26px;
 }
 .font-bold {
 	font-weight: 700;
@@ -590,4 +631,21 @@ video {
 .text-white {
 	--tw-text-opacity: 1;
 	color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+.transition {
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
+@media (min-width: 768px) {
+
+	.md\:inline {
+		display: inline;
+	}
+
+	.md\:flex {
+		display: flex;
+	}
 }
